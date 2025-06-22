@@ -35,8 +35,28 @@
  * For more details, see https://docs.gradle.org/8.0.1/userguide/java_library_plugin.html#sec:java_library_configurations_graph
  */
 dependencies {
-    runtimeOnlyNonPublishable("com.github.GTNewHorizons:NotEnoughItems:2.5.4-GTNH:dev")
-    runtimeOnlyNonPublishable('com.github.GTNewHorizons:CodeChickenLib:1.2.1:dev')
-    runtimeOnlyNonPublishable('com.github.GTNewHorizons:CodeChickenCore:1.2.1:dev')
-    implementation(rfg.deobf("Hbm-s-Nuclear-Tech-GIT:Hbm-s-Nuclear-Tech-GIT:1.0.27_X5299"))
+    //for things we want in the IDE, use implementation
+    //transitive=false means you dont want to pull it's dependencies from it's gradle
+    implementation('com.github.GTNewHorizons:Baubles-Expanded:2.1.6-GTNH:dev')
+    implementation('thaumcraft:Thaumcraft:1.7.10-4.2.3.5:dev') {transitive=false}
+    implementation('com.github.GTNewHorizons:NotEnoughItems:2.7.38-GTNH:dev')
+    implementation('curse.maven:thaumcraft-nei-plugin-225095:2241913')
+    implementation('com.github.GTNewHorizons:TCNEIAdditions:1.5.0:dev')
+    implementation('com.github.GTNewHorizons:WitchingGadgets:1.7.6-GTNH:dev') {transitive=false}
+    implementation(rfg.deobf("Hbm-s-Nuclear-Tech-GIT:Hbm-s-Nuclear-Tech-GIT:1.0.27_X5357"))
+    //for things we only want ingame, use runtimeOnly,
+    runtimeOnly('com.github.GTNewHorizons:ThaumicBases:1.8.8:dev'){
+        exclude module: "Baubles"
+        transitive=false
+    }
+    runtimeOnly('com.github.GTNewHorizons:ThaumicHorizons:1.7.4:dev') {
+        exclude module: "Baubles"
+        transitive=false
+    }
+    runtimeOnly('com.github.GTNewHorizons:ForbiddenMagic:0.8.0-GTNH:dev') {
+        exclude module: "Baubles"
+        transitive = false
+    }
+    runtimeOnly('com.github.GTNewHorizons:DummyCore:1.19.0:dev')
+    runtimeOnly('com.github.GTNewHorizons:CodeChickenCore:1.4.1:dev')
 }
