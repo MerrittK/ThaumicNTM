@@ -1,6 +1,7 @@
 package com.thaumicntm.main;
 
 import com.hbm.inventory.OreDictManager;
+import com.hbm.util.CompatExternal;
 import com.thaumicntm.inventory.mats.ThaumMats;
 import com.thaumicntm.inventory.mats.ThaumOreDict;
 import com.thaumicntm.recipes.NTMCrucibleRecipes;
@@ -11,7 +12,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import com.thaumicntm.items.ThaumNTMItems;
-
+import com.thaumicntm.recipes.RecipePatchListner;
 
 @Mod(
     modid = Tags.MODID,
@@ -33,10 +34,12 @@ public class MainRegistry {
     // etc, and register them with the GameRegistry."
     public void preInit(FMLPreInitializationEvent event) {
         proxy.preInit(event);
-
+        
         ThaumMats.MAT_THAUMIUM.getUnlocalizedName();
         ThaumNTMItems.mainRegistry();
         ThaumOreDict.registerResources();
+        CompatExternal.registerRecipeRegisterListener(new RecipePatchListner());
+        
     }
 
     @Mod.EventHandler
@@ -49,7 +52,7 @@ public class MainRegistry {
     @Mod.EventHandler
     // postInit "Handle interaction with other mods, complete your setup based on this."
     public void postInit(FMLPostInitializationEvent event) {
-        NTMCrucibleRecipes.registerRecipes();
+        
         proxy.postInit(event);
     }
 
