@@ -16,7 +16,7 @@ public class NTMCrucibleRecipes {
     static int idOffset = 300;
     
     public static void registerRecipes(){
-    	System.out.println("Trying to register"); 
+
     	registerCrucible(idOffset, "crucible.thaumiumHSS", 9, new ItemStack(ModItems.ingot_dura_steel) , 
     			new Mats.MaterialStack[] {
     					new Mats.MaterialStack(ThaumMats.MAT_THAUMIUM, n * 5), 
