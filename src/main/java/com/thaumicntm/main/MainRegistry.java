@@ -5,6 +5,7 @@ import com.hbm.util.CompatExternal;
 import com.thaumicntm.inventory.mats.ThaumMats;
 import com.thaumicntm.inventory.mats.ThaumOreDict;
 import com.thaumicntm.recipes.NTMCrucibleRecipes;
+import com.thaumicntm.research.ThaumResearchRegistry;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.*;
@@ -52,8 +53,8 @@ public class MainRegistry {
     @Mod.EventHandler
     // postInit "Handle interaction with other mods, complete your setup based on this."
     public void postInit(FMLPostInitializationEvent event) {
-        
         proxy.postInit(event);
+		ThaumResearchRegistry.mainResearchRegistry();
     }
 
     @Mod.EventHandler

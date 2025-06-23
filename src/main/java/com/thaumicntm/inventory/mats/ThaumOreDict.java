@@ -17,7 +17,7 @@ public class ThaumOreDict {
     public static final OreDictManager.DictFrame THAUMIUM = new OreDictManager.DictFrame("Thaumium");
 
     public static void registerResources() {
-        THAUMIUM			.nugget(new ItemStack(ConfigItems.itemNugget, 1, 6))									.ingot(new ItemStack(ConfigItems.itemResource,1,2))							.block(new ItemStack(ConfigBlocks.blockCosmeticSolid, 1, 9));
+        THAUMIUM			.nugget(new ItemStack(ConfigItems.itemNugget, 1, 6))									.ingot(new ItemStack(ConfigItems.itemResource,1,2))							.block(new ItemStack(ConfigBlocks.blockCosmeticSolid, 1, 4));
 
     }
 }

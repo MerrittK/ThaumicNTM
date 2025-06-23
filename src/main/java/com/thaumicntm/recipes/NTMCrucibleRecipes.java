@@ -12,7 +12,7 @@ public class NTMCrucibleRecipes {
 
     static int n = MaterialShapes.NUGGET.q(1);
     static int i = MaterialShapes.INGOT.q(1);
-    /**Add this when registring any new NTM crucible recipe **/
+    /**Add this when registering any new NTM crucible recipe **/
     static int idOffset = 300;
     
     public static void registerRecipes(){
