@@ -2,7 +2,7 @@ package com.thaumicntm.research;
 
 
 import com.hbm.items.ModItems;
-import com.thaumicntm.recipes.ThaumInfusionRecipes;
+import com.thaumicntm.inventory.recipes.ThaumInfusionRecipes;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
 import thaumcraft.api.aspects.AspectList;
@@ -44,6 +44,7 @@ public class ThaumResearchRegistry {
 		apocalypseLore.setPages(
 			apocalypseLorePage1
 		);
+		apocalypseLore.setParents("ELDRITCHMINOR");
 		ResearchCategories.addResearch(apocalypseLore);
 
 		ResearchItem chlorinePinwheel;
@@ -60,13 +61,15 @@ public class ThaumResearchRegistry {
 			new ItemStack(ModItems.chlorine_pinwheel)
 		);
 
-		chlorinePinwheelPage1 = new ResearchPage("apocalypseLorePage1");
+		chlorinePinwheelPage1 = new ResearchPage("chlorinePinwheelPage1");
 		chlorinePinwheelPage2 = new ResearchPage(ThaumInfusionRecipes.recipeChlorinePinwheel);
 
 		chlorinePinwheel.setPages(
 			chlorinePinwheelPage1,
 			chlorinePinwheelPage2
 		);
+		chlorinePinwheel.setParents("INFUSION");
+
 		ResearchCategories.addResearch(chlorinePinwheel);
 
 	}

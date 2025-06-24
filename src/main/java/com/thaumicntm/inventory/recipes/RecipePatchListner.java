@@ -1,6 +1,5 @@
-package com.thaumicntm.recipes;
+package com.thaumicntm.inventory.recipes;
 
-import com.thaumicntm.recipes.NTMCrucibleRecipes;
 import api.hbm.recipe.IRecipeRegisterListener;
 
 public class RecipePatchListner implements IRecipeRegisterListener {

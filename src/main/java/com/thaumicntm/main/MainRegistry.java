@@ -3,7 +3,7 @@ package com.thaumicntm.main;
 import com.hbm.util.CompatExternal;
 import com.thaumicntm.inventory.mats.ThaumMats;
 import com.thaumicntm.inventory.mats.ThaumOreDict;
-import com.thaumicntm.recipes.ThaumInfusionRecipes;
+import com.thaumicntm.inventory.recipes.ThaumInfusionRecipes;
 import com.thaumicntm.research.ThaumResearchRegistry;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.SidedProxy;
@@ -12,7 +12,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import com.thaumicntm.items.ThaumNTMItems;
-import com.thaumicntm.recipes.RecipePatchListner;
+import com.thaumicntm.inventory.recipes.RecipePatchListner;
 
 @Mod(
     modid = Tags.MODID,

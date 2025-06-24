@@ -1,4 +1,4 @@
-package com.thaumicntm.recipes;
+package com.thaumicntm.inventory.recipes;
 
 public class ThaumArcaneWorkbenchRecipes {
 

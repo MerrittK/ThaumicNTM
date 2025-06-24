@@ -1,4 +1,4 @@
-package com.thaumicntm.recipes;
+package com.thaumicntm.inventory.recipes;
 
 import com.hbm.items.ModItems;
 import net.minecraft.item.ItemStack;
