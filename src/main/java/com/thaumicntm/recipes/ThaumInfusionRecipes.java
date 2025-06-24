@@ -22,7 +22,7 @@ public class ThaumInfusionRecipes {
 				.add(Aspect.POISON,16)
 				.add(Aspect.TAINT,16)
 				.add(Aspect.AIR, 16),
-			new ItemStack(ModItems.chlorine_pinwheel),
+			new ItemStack(ConfigItems.itemBaubleBlanks),
 			new ItemStack[]{
 				new ItemStack(ConfigItems.itemResource, 1, 1),
 				new ItemStack(ConfigItems.itemResource, 1, 1),
