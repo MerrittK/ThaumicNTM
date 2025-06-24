@@ -2,11 +2,11 @@ package com.thaumicntm.research;
 
 
 import com.hbm.items.ModItems;
+import com.thaumicntm.recipes.ThaumInfusionRecipes;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
 import thaumcraft.api.aspects.AspectList;
 import thaumcraft.api.aspects.Aspect;
-import thaumcraft.common.config.ConfigResearch;
 import thaumcraft.api.research.ResearchCategories;
 import thaumcraft.api.research.ResearchItem;
 import thaumcraft.api.research.ResearchPage;
@@ -14,7 +14,7 @@ import thaumcraft.api.research.ResearchPage;
 
 
 public class ThaumResearchRegistry {
-	public static void mainResearchRegistry(){
+	public static void initResearchRegistry(){
 		registerCategories();
 		registerResearch();
 	}
@@ -27,17 +27,16 @@ public class ThaumResearchRegistry {
 	}
 	
 	public static void registerResearch(){
+
 		ResearchItem apocalypseLore;
-
 		ResearchPage apocalypseLorePage1;
-
 		apocalypseLore = new ResearchItem(
-			"apocalypseLore",
-			"NTM",
-			(new AspectList()).add(Aspect.ORDER,2).add(Aspect.ELDRITCH, 2),
-			0,
-			0,
+			"APOCALYPSELORE",
+			"ELDRITCH",
+			(new AspectList()).add(Aspect.ORDER,8).add(Aspect.ELDRITCH, 8),
 			1,
+			2,
+			2,
 			new ItemStack(ModItems.powder_balefire)
 		);
 
@@ -45,10 +44,30 @@ public class ThaumResearchRegistry {
 		apocalypseLore.setPages(
 			apocalypseLorePage1
 		);
-
 		ResearchCategories.addResearch(apocalypseLore);
 
+		ResearchItem chlorinePinwheel;
+		ResearchPage chlorinePinwheelPage1;
+		ResearchPage chlorinePinwheelPage2;
+
+		chlorinePinwheel = new ResearchItem(
+			"CHLORINEPINWHEEL",
+			"ARTIFICE",
+			(new AspectList()).add(Aspect.MECHANISM,6).add(Aspect.POISON,6).add(Aspect.AIR, 6),
+			-3,
+			2,
+			1,
+			new ItemStack(ModItems.chlorine_pinwheel)
+		);
+
+		chlorinePinwheelPage1 = new ResearchPage("apocalypseLorePage1");
+		chlorinePinwheelPage2 = new ResearchPage(ThaumInfusionRecipes.recipeChlorinePinwheel);
+
+		chlorinePinwheel.setPages(
+			chlorinePinwheelPage1,
+			chlorinePinwheelPage2
+		);
+		ResearchCategories.addResearch(chlorinePinwheel);
+
 	}
-
-
 }
