@@ -1,6 +1,7 @@
 package com.thaumicntm.main;
 
 import com.hbm.util.CompatExternal;
+import com.thaumicntm.inventory.FluidPatchListener;
 import com.thaumicntm.inventory.mats.ThaumMats;
 import com.thaumicntm.inventory.mats.ThaumOreDict;
 import com.thaumicntm.inventory.recipes.ThaumInfusionRecipes;
@@ -39,8 +40,9 @@ public class MainRegistry {
         ThaumNTMItems.mainRegistry();
         ThaumOreDict.registerResources();
         CompatExternal.registerRecipeRegisterListener(new RecipePatchListner());
-        
-    }
+		CompatExternal.registerFluidRegisterListener(new FluidPatchListener());
+
+	}
 
     @Mod.EventHandler
     // load "Do your mod setup. Build whatever data structures you care about. Register recipes."

@@ -28,6 +28,7 @@ public class ThaumResearchRegistry {
 	
 	public static void registerResearch(){
 
+		//APOCALYPSE LORE
 		ResearchItem apocalypseLore;
 		ResearchPage apocalypseLorePage1;
 		apocalypseLore = new ResearchItem(
@@ -47,10 +48,14 @@ public class ThaumResearchRegistry {
 		apocalypseLore.setParents("ELDRITCHMINOR");
 		ResearchCategories.addResearch(apocalypseLore);
 
+		/*
+		 * ARTIFICE
+		 */
+
+		//CHLORINE PINWHEEL
 		ResearchItem chlorinePinwheel;
 		ResearchPage chlorinePinwheelPage1;
 		ResearchPage chlorinePinwheelPage2;
-
 		chlorinePinwheel = new ResearchItem(
 			"CHLORINEPINWHEEL",
 			"ARTIFICE",
@@ -60,17 +65,41 @@ public class ThaumResearchRegistry {
 			1,
 			new ItemStack(ModItems.chlorine_pinwheel)
 		);
-
 		chlorinePinwheelPage1 = new ResearchPage("chlorinePinwheelPage1");
 		chlorinePinwheelPage2 = new ResearchPage(ThaumInfusionRecipes.recipeChlorinePinwheel);
-
 		chlorinePinwheel.setPages(
 			chlorinePinwheelPage1,
 			chlorinePinwheelPage2
 		);
 		chlorinePinwheel.setParents("INFUSION");
-
 		ResearchCategories.addResearch(chlorinePinwheel);
+
+		// RED KEY
+
+		//STARMETAL TOOLS
+
+
+		// MOLTEN TOOLS
+
+
+		/*
+		 * ALCHEMY
+		 */
+
+		// MISCNTMCHEM
+
+
+		// ADVNTMCHEM
+
+
+		// LEADEDFUEL
+
+
+		// NITANFUEL
+
+		// STARMETAL
+
+
 
 	}
 }
