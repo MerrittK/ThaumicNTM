@@ -43,7 +43,7 @@ dependencies {
     implementation('curse.maven:thaumcraft-nei-plugin-225095:2241913')
     implementation('com.github.GTNewHorizons:TCNEIAdditions:1.5.0:dev')
     implementation('com.github.GTNewHorizons:WitchingGadgets:1.7.6-GTNH:dev') {transitive=false}
-    implementation(rfg.deobf("Hbm-s-Nuclear-Tech-GIT:Hbm-s-Nuclear-Tech-GIT:1.0.27_X5357"))
+    implementation(rfg.deobf("Hbm-s-Nuclear-Tech-GIT:Hbm-s-Nuclear-Tech-GIT:1.0.27_X5377"))
     //for things we only want ingame, use runtimeOnly,
     runtimeOnly('com.github.GTNewHorizons:ThaumicBases:1.8.8:dev'){
         exclude module: "Baubles"
